@@ -140,8 +140,6 @@ const getBookData = () => {
     return;
   }
 
-  checkLocalStorageAndRemoveDemo();
-
   allBooks.push(bookData);
   addNewBookCard(bookData);
   toggleModal(modal, false);
@@ -165,9 +163,8 @@ openModal.addEventListener("click", () => toggleModal(modal, true));
 closeModal.addEventListener("click", () => toggleModal(modal, false));
 
 manageBooksBtn.addEventListener("click", () => {
+  checkLocalStorageAndRemoveDemo();
   getBookData();
-
-  // Check localStorage and remove demo card
 });
 
 // Adding of an event listener to the cancel buttons
@@ -249,6 +246,5 @@ window.addEventListener("load", () => {
     }
   };
 
-  console.log(parsedBooks.length);
   parsedBooks.length > 0 ? removeCard() : console.log(false);
 });
