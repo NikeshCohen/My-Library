@@ -66,12 +66,6 @@ const generateBookCardHTML = ({
   `;
 };
 
-// Function to check localStorage and remove demo card
-const checkLocalStorageAndRemoveDemo = () => {
-  const storedBooks = localStorage.getItem("allBooks");
-  storedBooks ? demoCard.remove() : "";
-};
-
 // Function to inject the created HTML into the DOM
 const addNewBookCard = (bookData) => {
   const newCard = generateBookCardHTML(bookData);
@@ -163,7 +157,7 @@ openModal.addEventListener("click", () => toggleModal(modal, true));
 closeModal.addEventListener("click", () => toggleModal(modal, false));
 
 manageBooksBtn.addEventListener("click", () => {
-  checkLocalStorageAndRemoveDemo();
+  demoCard ? demoCard.remove() : "";
   getBookData();
 });
 
