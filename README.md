@@ -1,6 +1,15 @@
-# Task Overview
+## Table of contents
 
-This was another big task so I created this README to assist you in navigation the program👨‍💻
+- [Overview](#overview)
+- [Javascript](#javascript-overview)
+- [Data Storage](#data-storage)
+- [UI](#modal-windows)
+- [How to use](#usage)
+- [Author](#author)
+
+## Overview
+
+"My library" is a web application used to store data on a users favorite books.
 
 ## Javascript Overview
 
@@ -88,3 +97,23 @@ The program contains two modal windows
 Each book record has its own card with various properties as well as a edit and delete button
 
 ![](./design/book-card.png)
+
+## Usage
+
+- creating new entry
+
+  - click add book
+  - fill in the required information
+  - click add book button in the modal window to add the book to the data base
+
+- editing entry
+
+  - click on the pen icon and edit accordingly
+
+- deleting entry
+  - click on the trash icon and confirm delete
+
+## Author
+
+- Website - [Nikesh Cohen](https://www.your-site.com)
+- Twitter - [@nikeshcohen](https://www.twitter.com/nikeshcohen)
