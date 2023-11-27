@@ -10,6 +10,7 @@
 ## Overview
 
 "My library" is a web application used to store data on a users favorite books.
+[Live site](https://nikeshcohen.github.io/My-Library/)
 
 ## Javascript Overview
 
@@ -115,5 +116,6 @@ Each book record has its own card with various properties as well as a edit and 
 
 ## Author
 
-- Website - [Nikesh Cohen](https://www.your-site.com)
+- Website - [Nikesh Cohen](https://nikeshcohen.netlify.app/)
+- LinkedIn - [Nikesh Cohen](https://www.linkedin.com/in/nikesh-cohen-a43967255/)
 - Twitter - [@nikeshcohen](https://www.twitter.com/nikeshcohen)
