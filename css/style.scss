@@ -1,0 +1,346 @@
+$white: #e0dfd5;
+$background: #313638;
+$primary: #f06543;
+$accent: #f09d51;
+$br: 1.7rem;
+
+//  Styling DOM elements
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: $background;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  border-radius: $br;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: $br;
+  background: $primary;
+}
+
+// Reusable elements
+.heading {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.subheading {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.text {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.btn {
+  border-radius: $br;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 0.3rem solid transparent;
+  transition: all 0.2s ease;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+}
+
+// Header
+.header {
+  display: flex;
+  justify-content: end;
+  padding: 2rem 4rem;
+}
+
+.header-btn {
+  background-color: $primary;
+  padding: 2rem 8rem;
+  color: $white;
+  border-radius: $br;
+
+  &:hover {
+    color: $primary;
+    background-color: transparent;
+    border: 0.3rem solid $primary;
+  }
+}
+
+// Modal window
+.modal {
+  border-radius: $br;
+  position: absolute;
+  display: none;
+}
+
+.form-modal {
+  background-color: $background;
+  z-index: 9999;
+  box-shadow: 3px 3px 15px 810px rgba(0, 0, 0, 0.4);
+  right: 60rem;
+  left: 60rem;
+  width: 60rem;
+
+  &.active {
+    display: block;
+    animation: bounce 1s ease-in-out 0s 1 normal forwards;
+    opacity: 1;
+  }
+}
+
+.modal-content-form {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-form,
+.close-delete {
+  color: $white;
+  cursor: pointer;
+  margin-left: 52rem;
+  margin-top: -2rem;
+
+  &:hover {
+    color: red;
+  }
+}
+
+.delete-modal {
+  background-color: $background;
+  color: $white;
+  text-align: center;
+  display: none;
+  z-index: 999;
+  padding: 1.5rem;
+  width: 40rem;
+  height: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  box-shadow: 3px 3px 15px 1000px rgba(0, 0, 0, 0.4);
+
+  &.active {
+    display: block;
+  }
+}
+
+.modal-content-delete {
+  width: 100%;
+  height: 100%;
+}
+
+.delete-modal-heading {
+  margin-bottom: 1rem;
+}
+
+.card-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.confirm-delete {
+  background-color: rgb(255, 114, 109);
+  color: $white;
+
+  &:hover {
+    background-color: red;
+  }
+}
+
+.cancel-delete {
+  background-color: rgb(222, 222, 222);
+
+  &:hover {
+    background-color: rgb(197, 197, 197);
+  }
+}
+
+// Book form
+.book-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+input,
+textarea,
+select {
+  color: $background;
+  border-radius: $br;
+  outline: none;
+  border: none;
+  border: 0.3rem solid transparent;
+  padding: 2rem;
+  height: 2rem;
+  width: 35rem;
+  margin-bottom: 1.5rem;
+
+  &:focus {
+    border: 0.3rem solid $accent;
+  }
+}
+
+textarea {
+  height: 14rem;
+  resize: none;
+}
+
+label {
+  color: $white;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-btn {
+  background-color: $white;
+  color: $accent;
+  padding: 1rem;
+  margin-top: 2rem;
+
+  &:hover {
+    box-shadow: 0 0 25px $accent;
+  }
+}
+
+// Books
+.books-heading {
+  color: $white;
+  text-align: center;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: $br;
+  margin: 4rem;
+}
+
+.book-card,
+.demo-card {
+  background-color: $white;
+  border-radius: $br;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+  padding: 2rem;
+  margin: 2rem 1rem;
+  height: 42rem;
+  width: 35rem;
+
+  &:hover {
+    transform: translateY(-0.4rem);
+    box-shadow: 8px 12px 16px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.action-icons {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.action-icon {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.edit:hover {
+  color: $primary;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.book-title,
+.date-added,
+.read-status,
+.rating {
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  margin-bottom: 2rem;
+}
+
+.tags {
+  margin-bottom: 2rem;
+}
+
+.notes {
+  background-color: white;
+  border-radius: $br;
+  font-family: "Cousine", monospace;
+  padding: 1.5rem;
+  height: 20rem;
+  width: 100%;
+}
+
+// Animations
+@keyframes bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}

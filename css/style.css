@@ -1,0 +1,321 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: #313638;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 0.4rem;
+  border-radius: 1.7rem;
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 1.7rem;
+  background: #f06543;
+}
+
+.heading {
+  font-size: 4rem;
+  font-weight: 600;
+}
+
+.subheading {
+  font-size: 2.4rem;
+  font-weight: 400;
+}
+
+.text {
+  font-size: 1.8rem;
+  font-weight: 200;
+}
+
+.btn {
+  border-radius: 1.7rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 0.3rem solid transparent;
+  transition: all 0.2s ease;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+}
+
+.header {
+  display: flex;
+  justify-content: end;
+  padding: 2rem 4rem;
+}
+
+.header-btn {
+  background-color: #f06543;
+  padding: 2rem 8rem;
+  color: #e0dfd5;
+  border-radius: 1.7rem;
+}
+.header-btn:hover {
+  color: #f06543;
+  background-color: transparent;
+  border: 0.3rem solid #f06543;
+}
+
+.modal {
+  border-radius: 1.7rem;
+  position: absolute;
+  display: none;
+}
+
+.form-modal {
+  background-color: #313638;
+  z-index: 9999;
+  box-shadow: 3px 3px 15px 810px rgba(0, 0, 0, 0.4);
+  right: 60rem;
+  left: 60rem;
+  width: 60rem;
+}
+.form-modal.active {
+  display: block;
+  animation: bounce 1s ease-in-out 0s 1 normal forwards;
+  opacity: 1;
+}
+
+.modal-content-form {
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-form,
+.close-delete {
+  color: #e0dfd5;
+  cursor: pointer;
+  margin-left: 52rem;
+  margin-top: -2rem;
+}
+.close-form:hover,
+.close-delete:hover {
+  color: red;
+}
+
+.delete-modal {
+  background-color: #313638;
+  color: #e0dfd5;
+  text-align: center;
+  display: none;
+  z-index: 999;
+  padding: 1.5rem;
+  width: 40rem;
+  height: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+  box-shadow: 3px 3px 15px 1000px rgba(0, 0, 0, 0.4);
+}
+.delete-modal.active {
+  display: block;
+}
+
+.modal-content-delete {
+  width: 100%;
+  height: 100%;
+}
+
+.delete-modal-heading {
+  margin-bottom: 1rem;
+}
+
+.card-button-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-top: 3rem;
+  gap: 3rem;
+}
+
+.confirm-delete {
+  background-color: rgb(255, 114, 109);
+  color: #e0dfd5;
+}
+.confirm-delete:hover {
+  background-color: red;
+}
+
+.cancel-delete {
+  background-color: rgb(222, 222, 222);
+}
+.cancel-delete:hover {
+  background-color: rgb(197, 197, 197);
+}
+
+.book-form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+input,
+textarea,
+select {
+  color: #313638;
+  border-radius: 1.7rem;
+  outline: none;
+  border: none;
+  border: 0.3rem solid transparent;
+  padding: 2rem;
+  height: 2rem;
+  width: 35rem;
+  margin-bottom: 1.5rem;
+}
+input:focus,
+textarea:focus,
+select:focus {
+  border: 0.3rem solid #f09d51;
+}
+
+textarea {
+  height: 14rem;
+  resize: none;
+}
+
+label {
+  color: #e0dfd5;
+  font-size: 1.4rem;
+  margin-left: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.modal-btn {
+  background-color: #e0dfd5;
+  color: #f09d51;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+.modal-btn:hover {
+  box-shadow: 0 0 25px #f09d51;
+}
+
+.books-heading {
+  color: #e0dfd5;
+  text-align: center;
+}
+
+.books {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  border-radius: 1.7rem;
+  margin: 4rem;
+}
+
+.book-card,
+.demo-card {
+  background-color: #e0dfd5;
+  border-radius: 1.7rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.2s ease-in-out;
+  padding: 2rem;
+  margin: 2rem 1rem;
+  height: 42rem;
+  width: 35rem;
+}
+.book-card:hover,
+.demo-card:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 8px 12px 16px 5px rgba(0, 0, 0, 0.3);
+}
+
+.action-icons {
+  display: flex;
+  justify-content: end;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.action-icon {
+  cursor: pointer;
+  height: 2rem;
+  width: 2rem;
+}
+
+.edit:hover {
+  color: #f06543;
+}
+
+.delete:hover {
+  color: red;
+}
+
+.book-title,
+.date-added,
+.read-status,
+.rating {
+  margin-bottom: 0.5rem;
+}
+
+.author {
+  margin-bottom: 2rem;
+}
+
+.tags {
+  margin-bottom: 2rem;
+}
+
+.notes {
+  background-color: white;
+  border-radius: 1.7rem;
+  font-family: "Cousine", monospace;
+  padding: 1.5rem;
+  height: 20rem;
+  width: 100%;
+}
+
+@keyframes bounce {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateY(-250px);
+  }
+  38% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  55% {
+    animation-timing-function: ease-in;
+    transform: translateY(-65px);
+  }
+  72% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+  81% {
+    animation-timing-function: ease-in;
+    transform: translateY(-28px);
+  }
+  90% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+  95% {
+    animation-timing-function: ease-in;
+    transform: translateY(-8px);
+  }
+  100% {
+    animation-timing-function: ease-out;
+    transform: translateY(0);
+  }
+}/*# sourceMappingURL=style.css.map */

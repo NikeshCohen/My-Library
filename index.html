@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <!-- Importing Font CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cousine&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+    <!-- Linking style sheet -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Linking the Javascript -->
+    <script src="./js/script.js" defer></script>
+    <title>My Library</title>
+  </head>
+  <body>
+    <header class="header">
+      <!-- Header Section -->
+      <button class="btn primary-btn header-btn">Add Book</button>
+    </header>
+    <section class="modal form-modal">
+      <!-- Add Book Modal -->
+      <div class="modal-content-form">
+        <span class="material-icons close-form">close</span>
+        <form class="book-form">
+          <!-- Book Title -->
+          <label for="title">Title:</label>
+          <input type="text" id="title" name="title" required />
+          <!-- Author -->
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" required />
+          <!-- Dated Addded -->
+          <label for="publicationDate">Date Added:</label>
+          <input type="text" id="addedDate" name="publicationDate" required />
+          <!-- RAtions -->
+          <label for="rating">Rating:</label>
+          <input
+            type="number"
+            id="rating"
+            name="rating"
+            min="1"
+            max="10"
+            required
+          />
+
+          <label for="tags">Tags/Keywords:</label>
+          <input type="text" id="tags" name="tags" />
+
+          <label for="readStatus">Read Status:</label>
+          <select id="readStatus" name="readStatus">
+            <option value="read">Read</option>
+            <option value="Yet to Read">Yet to read</option>
+          </select>
+
+          <label for="personalNotes">Personal Notes:</label>
+          <textarea id="personalNotes" name="personalNotes"></textarea>
+
+          <!-- Submit Button -->
+          <button type="submit" class="btn modal-btn">Add Book</button>
+        </form>
+      </div>
+    </section>
+    <!-- Delete Modal -->
+    <section class="modal delete-modal">
+      <div class="modal-content-delete">
+        <h2 class="subheading delete-modal-heading">Delete this record</h2>
+        <p class="text delete-text">
+          Are you sure you want to delete this record?
+        </p>
+        <div class="card-button-wrapper">
+          <button class="btn cancel-delete">Cancel</button>
+          <button class="btn confirm-delete">Delete</button>
+        </div>
+      </div>
+    </section>
+    <h1 class="heading books-heading">My Library</h1>
+    <section class="books">
+      <!-- Books section -->
+      <div class="book-card demo-card">
+        <div class="action-icons">
+          <ion-icon name="pencil-outline" class="action-icon edit"></ion-icon>
+          <ion-icon name="trash-outline" class="action-icon delete"></ion-icon>
+        </div>
+        <h2 class="subheading book-title">[Book Title]</h2>
+        <p class="text author">[Author]</p>
+        <p class="text date-added">Date Added: [DD/MM/YYYY]</p>
+        <p class="text read-status">Read Status: [Status]</p>
+        <p class="text rating">Rating: [Value]/5</p>
+        <p class="text tags">Tags: [Tags]</p>
+        <div class="notes">
+          <p>
+            Notes: THIS CARD IS A FEATURE PREVIEW. Click 'ADD BOOK' to add a
+            book :)
+          </p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
